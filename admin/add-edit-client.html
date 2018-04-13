@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Joao">
+
+    <title>Empresa.com</title>
+
+    <link rel="icon" href="../favicon.ico">
+    <!-- CSS -->
+    <link href="../assets/css/admin.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Empresa.com</a>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <span data-feather="home"></span> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="clients.html">
+                                <span data-feather="users"></span> Clientes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galleries.html">
+                                <span data-feather="airplay"></span> Galerias
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">
+                                <span data-feather="briefcase"></span> Serviços
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="users.html">
+                                <span data-feather="user-check"></span> Usuários
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Menu</span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="log-out"></span> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                </div>
+
+                <h5>Adicionar/Editar cliente</h5>
+                <br>
+                <form class="needs-validation" action="ClientController" name="addEditClient">
+                    <input type="hidden" readonly name="clientid" value="${client.clientid}">
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="name" name="name" value="${client.name}">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="address">Endereço</label>
+                            <input type="text" class="form-control" id="address" name="address" value="${client.address}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cellphone">Celular</label>
+                            <input type="text" class="form-control" id="cellphone" name="cellphone" value="${client.cellphone}">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email">E-mail</label>
+                            <input type="text" class="form-control" id="email" name="email" value="${client.email}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="city">Cidade</label>
+                            <input type="text" class="form-control" id="city" name="city" value="${client.city}">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="estate">Estado</label>
+                            <input type="text" class="form-control" id="estate" name="estate" value="${client.estate}">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="zip">CEP</label>
+                            <input type="text" class="form-control" id="zip" name="zip" value="${client.zip}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="addr_number">Número</label>
+                            <input type="text" class="form-control" id="addr_number" name="addr_number" value="${client.addr_number}">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="neighborhood">Bairro</label>
+                            <input type="text" class="form-control" id="neighborhood" name="neighborhood" value="${client.neighborhood}">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="phone">Telefone</label>
+                            <input type="text" class="form-control" id="phone" name="phone" value="${client.phone}">
+                        </div>
+                    </div>
+
+                    <hr class="mb-4">
+
+                    <button class="btn btn-success" type="submit">Enviar</button>
+                </form>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendors/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+
+</body>
+
+</html>
