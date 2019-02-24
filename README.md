@@ -1,4 +1,4 @@
-# aulawebhtml
+# Aula Web
 
 Feito em HTML
  
@@ -6,4 +6,4 @@ Somente para demonstração.
 
 
 ### Index
-![Index](https://raw.githubusercontent.com/joaorik/aulawebhtml/master/index.png)
+![Index](https://raw.githubusercontent.com/joaorik/html-aulaweb/master/index.png)
